@@ -1,0 +1,12 @@
+mkdir catcher-dashboard
+cd catcher-dashboard
+mkdir backend frontend
+cd backend
+python -m venv venv
+venv\scripts\activate
+pip install flask flask-cors pybaseball pandas numpy
+pip --version
+python --version
+python3 --version
+pip3 --version
+dir
