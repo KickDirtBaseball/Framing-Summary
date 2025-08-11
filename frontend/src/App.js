@@ -27,7 +27,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`http://localhost:5000/api/statcast/catchers?date=${date}`);
+     const response = await fetch(`https://framing-summary-production.up.railway.app/api/statcast/catchers?date=${date}`);
       const data = await response.json();
       
       if (response.ok) {
@@ -51,7 +51,7 @@ function App() {
   const fetchGameSummaryPlot = async (catcher) => {
     setPlotLoading(true);
     try {
-      const response = await fetch(`http://localhost:5000/api/plot/${catcher.id}/${catcher.game_pk}?date=${selectedDate}`);
+     const response = await fetch(`https://framing-summary-production.up.railway.app/api/plot/${catcher.id}/${catcher.game_pk}?date=${selectedDate}`);
       const data = await response.json();
       
       if (response.ok && data.image) {
